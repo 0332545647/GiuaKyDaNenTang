@@ -1,38 +1,102 @@
-.App {
+/* Base styles */
+.birthday-countdown-app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+  color: #e91e63;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Input section */
+.birthday-input__container {
+  margin-bottom: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.birthday-input__field {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.birthday-input__field:focus {
+  border-color: #c2185b;
+}
+
+/* Buttons */
+.birthday-countdown__button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0.5rem;
+}
+
+.birthday-countdown__button--calculate {
+  background-color: #e91e63;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.birthday-countdown__button--calculate:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.birthday-countdown__button--share {
+  background-color: #4caf50;
+  color: white;
+}
+
+.birthday-countdown__button--share:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+/* Result section */
+.birthday-result__container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-result__text {
+  color: #e91e63;
+  margin-bottom: 1.5rem;
+}
+
+/* Battery info */
+.device-info__battery {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .birthday-countdown-app {
+    padding: 1.5rem;
+    margin: 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .app-title {
+    font-size: 1.5rem;
   }
 }
